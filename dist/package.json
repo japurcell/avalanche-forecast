@@ -13,7 +13,8 @@
     "dev": "parcel index.html --open",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "serve": "eleventy --serve"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
