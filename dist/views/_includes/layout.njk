@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Avalanche Forecast</title>
+  <title>{{title}}</title>
   <meta name="description" content="Provides avalanche forecast data from Avalanche.org">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -39,19 +39,12 @@
   <!-- Add your site or application content here -->
   <main>
     <div id="content">
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
+        {{ content | safe }}
     </div>
   </main>
 
-  
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <!--<script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
-
+  {% include 'partials/footer.njk' %}
+  {% include 'partials/analytics.njk' %}
 
   <script src="js/vendor/modernizr-3.11.4.min.js"></script>
   <script type="module" src="js/app.js"></script>
