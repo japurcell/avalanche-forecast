@@ -1,6 +1,6 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "Avalanche Forecast",
+  "name": "Avalanche Forecast",
   "icons": [{
     "src": "icon.png",
     "type": "image/png",

@@ -1,17 +1,27 @@
 {
-  "name": " ",
+  "name": "avalanche-forecast",
   "version": "0.0.1",
+  "private": true,
   "description": "",
-  "keywords": [""],
+  "keywords": [
+    ""
+  ],
   "license": "",
   "author": "",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.14",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0"
   }
 }
