@@ -31,6 +31,17 @@ main {
   margin-top: 5rem;
 }
 
+#content {
+  margin: 0 auto;
+}
+
+@media (min-width: 37.5rem) {
+  #content {
+    max-width: 53.125rem;
+    min-width: 37.5rem;
+  }
+}
+
 .zone__link {
   font-size: 1.25rem;
   text-transform: uppercase;
@@ -47,6 +58,53 @@ article {
   margin-bottom: 1rem;
 }
 
+article header, .zone__period {
+  align-items: center;
+  display: flex;
+}
+
+article header span {
+  margin-right: .25rem;
+}
+
+.zone__period {
+  margin: .5rem auto;
+}
+
+.zone__period-item:first-child {
+  width: 50%;
+}
+
+.zone__period-item {
+  font-size: .75rem;
+}
+
+.zone__period-item-header {
+  text-transform: uppercase;
+}
+
+.zone__period .zone__period-item:not(:first-child) {
+  margin-left: .5rem;
+}
+
 article > p {
   margin-top: .5rem;
 }
+
+/* @media (min-width: 1300px) {
+  #content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: inherit;
+    min-width: inherit;
+  }
+
+  #content article:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  #content article:not(:first-child) {
+    margin-left: 1rem;
+  }
+} */
