@@ -4,7 +4,9 @@ const renderZones = (zones) =>
   zones.map(({ name, link, travel_advice }) =>
     html`
       <article>
-        <h2><a href="${link}">${name}</a></h2>
+        <header>
+          <a class="zone__link" href="${link}">${name}</a>
+        </header>
         <p>${travel_advice}</p>
       </article>
     `);

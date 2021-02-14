@@ -30,3 +30,23 @@ body > header {
 main {
   margin-top: 5rem;
 }
+
+.zone__link {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+article {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+#content article:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+article > p {
+  margin-top: .5rem;
+}
