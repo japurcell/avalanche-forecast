@@ -1,5 +1,5 @@
 import data from './initial-data.js';
-import Zones from '../views/components/Zones.js';
+import Zones from './components/Zones.js';
 
 const content = document.getElementById('content');
 Zones(data.features, content);

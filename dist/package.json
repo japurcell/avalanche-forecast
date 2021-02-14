@@ -9,24 +9,18 @@
   "license": "",
   "author": "",
   "scripts": {
-    "build": "eleventy",
     "dev": "parcel index.html --open",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "web-dev-server",
-    "serve": "eleventy --serve"
+    "watch": "web-dev-server"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.11.1",
     "@web/dev-server": "^0.1.7",
     "@web/dev-server-esbuild": "^0.2.11",
-    "browser-sync": "^2.26.14",
-    "express": "^4.17.1",
     "gulp": "^4.0.2",
-    "gulp-nodemon": "^2.5.0",
     "lit-html": "^1.3.0"
   }
 }
