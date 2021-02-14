@@ -1,14 +1,8 @@
 import data from './initial-data.js';
+import Zones from '../views/components/Zones.js';
 
 const content = document.getElementById('content');
-
-if (data.features && data.features.length) {
-    data.features.forEach(feature => {
-    const name = document.createElement('article');
-    name.innerText = feature.properties.name;
-    content.appendChild(name);
-  });
-}
+Zones(data.features, content);
 
 // if ('serviceWorker' in navigator) {
 //   navigator.serviceWorker
