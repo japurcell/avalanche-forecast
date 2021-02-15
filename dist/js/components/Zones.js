@@ -1,55 +1,36 @@
-import { html, nothing, render } from 'lit-html';
-import { styleMap } from 'lit-html/directives/style-map.js';
-
-const iconClickHandler = {
-  handleEvent(e) {
-    const warningId = e.target.getAttribute('data-warningid');
-    const warning = document.getElementById(warningId);
-
-    if (warning) {
-      warning.classList.remove('d-none');
-    }
-  }
-};
-
-const warningTemplate = ({ id, warning, color, font_color }) =>
-  warning && warning.reason && warning.reason.length
-    ?
-      html`
-        <div id="warning${id}"
-          class="d-none zone__warning"
-          style=${styleMap({ backgroundColor: color, color: font_color })}>
-          ${warning.reason}
-        </div>
-      `
-    : nothing;
+import { html, render } from 'lit-html';
+import zonePeriod from './ZonePeriod.js';
+import { warningIcon, warningTemplate } from './Warning.js';
 
 const renderZones = features =>
   features.map(feature => {
-    const { color, font_color, name, link, start_date, end_date, travel_advice, warning }
-      = feature.properties;
+
+    const {
+      color,
+      font_color,
+      name,
+      link,
+      start_date,
+      end_date,
+      travel_advice,
+      warning
+    } = feature.properties;
+
     return html`
       <article>
         <header>
-          <span @click=${iconClickHandler}
-            data-warningid="warning${feature.id}"
-            style=${styleMap({ color: color })}
-            class="material-icons md-36">warning</span>
+          ${warningIcon({ id: feature.id, warning, color })}
           <a class="zone__link" href="${link}">${name}</a>
         </header>
-        <div class="zone__period">
-          <div class="zone__period-item">
-            <div class="zone__period-item-header">ISSUED</div>
-            <div>${new Date(start_date).toLocaleString()}</div>
-          </div>
-          <div class="zone__period-item">
-            <div class="zone__period-item-header">EXPIRES</div>
-            <div>${new Date(end_date).toLocaleString()}</div>
-          </div>
-        </div>
+        ${zonePeriod({ start_date, end_date })}
         <p>${travel_advice}</p>
       </article>
-      ${warningTemplate({ id: feature.id, warning, color, font_color })}
+      ${warningTemplate({
+        id: feature.id,
+        warning,
+        color,
+        font_color
+      })}
     `});
 
 export default (features, targetElement) => {
