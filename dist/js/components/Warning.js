@@ -35,7 +35,7 @@ const warningIcon = ({ id, warning, color }) =>
       class="material-icons md-36">warning</span>
   `;
 
-const warningTemplate = ({ id, warning, color, font_color }) =>
+const warningTemplate = ({ id, warning, color, font_color, danger }) =>
   warning && warning.reason && warning.reason.length
     ?
       html`
@@ -47,9 +47,10 @@ const warningTemplate = ({ id, warning, color, font_color }) =>
           <div class="warning__navbar"
             @click=${warningCloseClickHandler}
             data-warningid="warning${id}">
-            <span></span>
+            <span class="warning__navbar-title">Danger - ${danger}</span>
             <span @click=${warningCloseClickHandler}
                   data-warningid="warning${id}"
+                  style=${styleMap({ color: font_color })}
                   class="material-icons md-48">highlight_off</span>
           </div>
           <div class="warning__body">

@@ -100,11 +100,13 @@ article header span {
   display: flex;
 }
 
-.warning__navbar :first-child {
+.warning__navbar-title {
   flex: 1;
+  font-size: 1.25rem;
+  text-transform: uppercase;
 }
 
-.warning__body {
+.warning__body, .warning__navbar-title{
   padding: 1rem;
 }
 
