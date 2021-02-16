@@ -3,9 +3,16 @@ const cacheName = 'avafor-v1';
 const filesToCache = [
   '/',
   '/index.html',
+  '/css/color.css',
+  '/css/fonts.css',
+  '/css/layout.css',
+  '/css/material-icons.css',
   '/css/normalize.css',
   '/css/style.css',
-  '/js/app.js'
+  '/js/app.js',
+  '/js/components/Warning.js',
+  '/js/components/ZonePeriod.js',
+  '/js/components/Zones.js'
 ];
 
 self.addEventListener('activate', e => {
@@ -50,6 +57,7 @@ self.addEventListener('fetch', e => {
      * "Cache, falling back to the network" offline strategy:
      * https://jakearchibald.com/2014/offline-cookbook/#cache-falling-back-to-network
      */
+    console.log('[Service Worker] using cache data');
     e.respondWith(
       caches.match(e.request).then(response => {
         return response || fetch(e.request);
