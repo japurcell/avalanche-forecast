@@ -8,7 +8,6 @@ const renderZones = features =>
     const {
       color,
       danger,
-      font_color,
       name,
       link,
       start_date,
@@ -30,7 +29,6 @@ const renderZones = features =>
         id: feature.id,
         warning,
         color,
-        font_color,
         danger
       })}
     `});

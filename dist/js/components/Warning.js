@@ -35,27 +35,28 @@ const warningIcon = ({ id, warning, color }) =>
       class="material-icons md-36">warning</span>
   `;
 
-const warningTemplate = ({ id, warning, color, font_color, danger }) =>
+const warningTemplate = ({ id, warning, color, danger }) =>
   warning && warning.reason && warning.reason.length
     ?
       html`
         <div id="warning${id}"
           data-warningid="warning${id}"
-          @click=${warningCloseClickHandler}
-          class="d-none zone__warning"
-          style=${styleMap({ backgroundColor: color, color: font_color })}>
-          <div class="warning__navbar"
-            @click=${warningCloseClickHandler}
-            data-warningid="warning${id}">
-            <span class="warning__navbar-title">Danger - ${danger}</span>
-            <span @click=${warningCloseClickHandler}
-                  data-warningid="warning${id}"
-                  style=${styleMap({ color: font_color })}
-                  class="material-icons md-48">highlight_off</span>
-          </div>
-          <div class="warning__body">
-            ${zonePeriod(warning)}
-            ${warning.reason}
+          class="d-none modal__bg">
+          <div @click=${warningCloseClickHandler}
+            class="zone__warning"
+            style=${styleMap({ borderColor: color })}>
+            <div class="warning__navbar"
+              @click=${warningCloseClickHandler}
+              data-warningid="warning${id}">
+              <span class="warning__navbar-title">Danger - ${danger}</span>
+              <span @click=${warningCloseClickHandler}
+                    data-warningid="warning${id}"
+                    class="material-icons md-48">highlight_off</span>
+            </div>
+            <div class="warning__body">
+              ${zonePeriod(warning)}
+              <div>${warning.reason}</div>
+            </div>
           </div>
         </div>
       `
