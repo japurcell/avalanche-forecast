@@ -2260,6 +2260,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "rollup"
           ],
           "linkType": "HARD",
+        }],
+        ["virtual:f54e3379c58607e1921f34358fb2331d79d16e3f2251f39dbdf6506f5eedce95c1bbf22865214fce7e5ded726e4157c292dabb98f9e685c3de328b9a03fc8ab6#npm:11.2.0", {
+          "packageLocation": "./.yarn/$$virtual/@rollup-plugin-node-resolve-virtual-f29836dab3/0/cache/@rollup-plugin-node-resolve-npm-11.2.0-1858611eb0-173bb5822b.zip/node_modules/@rollup/plugin-node-resolve/",
+          "packageDependencies": [
+            ["@rollup/plugin-node-resolve", "virtual:f54e3379c58607e1921f34358fb2331d79d16e3f2251f39dbdf6506f5eedce95c1bbf22865214fce7e5ded726e4157c292dabb98f9e685c3de328b9a03fc8ab6#npm:11.2.0"],
+            ["@rollup/pluginutils", "virtual:f29836dab376635d1d37836c062ae8eab6db0b3f86177ce82abf2b748bd6d6e64680eebd4a8a2034fecca6b5b0c2eed3211b72b9336991dcc27898a376b0ef46#npm:3.1.0"],
+            ["@types/resolve", "npm:1.17.1"],
+            ["@types/rollup", null],
+            ["builtin-modules", "npm:3.2.0"],
+            ["deepmerge", "npm:4.2.2"],
+            ["is-module", "npm:1.0.0"],
+            ["resolve", "patch:resolve@npm%3A1.20.0#builtin<compat/resolve>::version=1.20.0&hash=3388aa"],
+            ["rollup", "npm:2.39.0"]
+          ],
+          "packagePeers": [
+            "@types/rollup",
+            "rollup"
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["@rollup/pluginutils", [
@@ -2279,6 +2298,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["estree-walker", "npm:1.0.1"],
             ["picomatch", "npm:2.2.2"],
             ["rollup", null]
+          ],
+          "packagePeers": [
+            "@types/rollup",
+            "rollup"
+          ],
+          "linkType": "HARD",
+        }],
+        ["virtual:f29836dab376635d1d37836c062ae8eab6db0b3f86177ce82abf2b748bd6d6e64680eebd4a8a2034fecca6b5b0c2eed3211b72b9336991dcc27898a376b0ef46#npm:3.1.0", {
+          "packageLocation": "./.yarn/$$virtual/@rollup-pluginutils-virtual-4efb244532/0/cache/@rollup-pluginutils-npm-3.1.0-b44b222e7d-45da6411e0.zip/node_modules/@rollup/pluginutils/",
+          "packageDependencies": [
+            ["@rollup/pluginutils", "virtual:f29836dab376635d1d37836c062ae8eab6db0b3f86177ce82abf2b748bd6d6e64680eebd4a8a2034fecca6b5b0c2eed3211b72b9336991dcc27898a376b0ef46#npm:3.1.0"],
+            ["@types/estree", "npm:0.0.39"],
+            ["@types/rollup", null],
+            ["estree-walker", "npm:1.0.1"],
+            ["picomatch", "npm:2.2.2"],
+            ["rollup", "npm:2.39.0"]
           ],
           "packagePeers": [
             "@types/rollup",
@@ -3356,11 +3391,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./dist/",
           "packageDependencies": [
             ["avalanche-forecast", "workspace:dist"],
+            ["@rollup/plugin-node-resolve", "virtual:f54e3379c58607e1921f34358fb2331d79d16e3f2251f39dbdf6506f5eedce95c1bbf22865214fce7e5ded726e4157c292dabb98f9e685c3de328b9a03fc8ab6#npm:11.2.0"],
             ["@web/dev-server", "npm:0.1.7"],
             ["@web/dev-server-esbuild", "npm:0.2.11"],
             ["gulp", "npm:4.0.2"],
             ["lit-html", "npm:1.3.0"],
-            ["parcel-bundler", "npm:1.12.4"]
+            ["parcel-bundler", "npm:1.12.4"],
+            ["rollup", "npm:2.39.0"]
           ],
           "linkType": "SOFT",
         }]
