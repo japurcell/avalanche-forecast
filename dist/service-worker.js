@@ -1,17 +1,18 @@
 const dataCacheName = 'avafor-data-v1';
 const cacheName = 'avafor-v1';
+const baseUrl = '/avalanche-forecast/'
 const filesToCache = [
-  '/',
-  '/index.html',
-  '/favicon.ico',
-  '/css/color.css',
-  '/css/fonts.css',
-  '/css/layout.css',
-  '/css/material-icons.css',
-  '/css/normalize.css',
-  '/css/style.css',
-  '/fonts/MaterialIcons-Regular.woff2',
-  '/js/bundle.js'
+  baseUrl,
+  baseUrl + 'index.html',
+  baseUrl + 'favicon.ico',
+  baseUrl + 'css/color.css',
+  baseUrl + 'css/fonts.css',
+  baseUrl + 'css/layout.css',
+  baseUrl + 'css/material-icons.css',
+  baseUrl + 'css/normalize.css',
+  baseUrl + 'css/style.css',
+  baseUrl + 'fonts/MaterialIcons-Regular.woff2',
+  baseUrl + 'js/bundle.js'
 ];
 
 self.addEventListener('install', e => {

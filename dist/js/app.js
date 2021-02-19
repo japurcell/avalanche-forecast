@@ -3,7 +3,7 @@ import addInstallHandlers from './install.js';
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
-    .register('./service-worker.js')
+    .register('/avalanche-forecast/service-worker.js', { scope: '/avalanche-forecast/' })
     .then(() => console.debug('Service Worker registered'));
 }
 
