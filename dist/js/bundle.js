@@ -1323,7 +1323,7 @@ const warningIcon = ({ id, warning, color }) =>
         color: color,
         cursor: warning && warning.reason ? 'pointer' : 'inherit'
       })}
-      class="material-icons md-36">warning</span>
+      class="material-icons md-36">${warning && warning.reason ? 'warning' : 'error_outline'}</span>
   `;
 
 const warningTemplate = ({ id, warning, color, danger }) =>
@@ -1390,6 +1390,20 @@ var Zones = (features, targetElement) => {
   }
 };
 
+function addInstallHandlers() {
+    window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+
+    console.log(`'beforeinstallprompt' event was fired`);
+  });
+
+  window.addEventListener('appinstalled', e => {
+    e.preventDefault();
+
+    console.log('PWA was installed');
+  });
+}
+
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('./service-worker.js')
@@ -1411,3 +1425,5 @@ fetch(apiUrl)
     Zones(data.features, content);
   })
   .catch(reason => console.error(reason));
+
+addInstallHandlers();

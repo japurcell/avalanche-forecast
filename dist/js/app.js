@@ -1,4 +1,5 @@
 import Zones from './components/Zones.js';
+import addInstallHandlers from './install.js';
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
@@ -21,3 +22,5 @@ fetch(apiUrl)
     Zones(data.features, content);
   })
   .catch(reason => console.error(reason));
+
+addInstallHandlers();

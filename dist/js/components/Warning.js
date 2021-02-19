@@ -32,7 +32,7 @@ const warningIcon = ({ id, warning, color }) =>
         color: color,
         cursor: warning && warning.reason ? 'pointer' : 'inherit'
       })}
-      class="material-icons md-36">warning</span>
+      class="material-icons md-36">${warning && warning.reason ? 'warning' : 'error_outline'}</span>
   `;
 
 const warningTemplate = ({ id, warning, color, danger }) =>

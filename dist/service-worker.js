@@ -3,17 +3,22 @@ const cacheName = 'avafor-v1';
 const filesToCache = [
   '/',
   '/index.html',
+  '/favicon.ico',
   '/css/color.css',
   '/css/fonts.css',
   '/css/layout.css',
   '/css/material-icons.css',
   '/css/normalize.css',
   '/css/style.css',
+  '/fonts/MaterialIcons-Regular.woff2',
   '/js/bundle.js'
 ];
 
 self.addEventListener('install', e => {
   console.log('[ServiceWorker] Install');
+
+  self.skipWaiting();
+
   e.waitUntil(
     caches.open(cacheName).then(cache => {
       console.log('[ServiceWorker] Caching app shell');
@@ -52,10 +57,12 @@ self.addEventListener('fetch', e => {
      */
     e.respondWith(
       caches.open(dataCacheName).then(cache => {
-        return fetch(e.request).then(response => {
-          cache.put(e.request.url, response.clone());
-          return response;
-        });
+        return fetch(e.request)
+          .then(response => {
+            cache.put(e.request.url, response.clone());
+            return response;
+          })
+          .catch(reason => cache.match(e.request.url));
       })
     );
   } else {
