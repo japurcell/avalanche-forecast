@@ -104,7 +104,7 @@ define("./service-worker.js",['./workbox-821946f6'], function (workbox) { 'use s
    */
 
   workbox.precacheAndRoute([{
-    "url": "070edf95a5a42a3d20d0.webmanifest",
+    "url": "4cac50dd50b637cd336a.webmanifest",
     "revision": null
   }, {
     "url": "8994f68a9f8948c06a3b.png",
@@ -114,7 +114,7 @@ define("./service-worker.js",['./workbox-821946f6'], function (workbox) { 'use s
     "revision": null
   }, {
     "url": "bundle.js",
-    "revision": "3d7beafe9eca3da86e1e01c22ab591e6"
+    "revision": "d823417de7666e3b5bbb44f7b33a5b13"
   }, {
     "url": "cff684e59ffb052d72cb.woff2",
     "revision": null
@@ -126,7 +126,10 @@ define("./service-worker.js",['./workbox-821946f6'], function (workbox) { 'use s
     "revision": "7676155efec287aaaa1b78ea9a79120d"
   }, {
     "url": "index.html",
-    "revision": "140d51f55678b0a0aafb82efaf6d6a5c"
+    "revision": "0fce6ec6e5c7396f1e044f71a8fe6ad4"
+  }, {
+    "url": "site.webmanifest",
+    "revision": "06d923c4897c815d2d4f964d9d133626"
   }, {
     "url": "tile.png",
     "revision": "9bee3f492c17e9fecc3949397ba0e022"

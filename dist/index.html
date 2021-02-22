@@ -1,67 +1,41 @@
-<head><link rel="icon" href="favicon.ico"><script defer src="bundle.js"></script></head>Html Webpack Plugin:
-<pre>
-  Error: Child compilation failed:
-  Module not found: Error: Can't resolve '.yarn/$$virtual/html-loader-virtual-da5fec2bba/0/cache/html-loader  -npm-2.1.0-b4c5e171ef-0cae64528c.zip/node_modules/html-loader/dist/runtime/getUrl.js' in '/Users/adam/Deve  lopment/avalanche-forecast'
-  Did you mean './.yarn/$$virtual/html-loader-virtual-da5fec2bba/0/cache/html-loader-npm-2.1.0-b4c5e171ef-0c  ae64528c.zip/node_modules/html-loader/dist/runtime/getUrl.js'?
-  Requests that should resolve in the current directory need to start with './'.
-  Requests that start with a name are treated as module requests and resolve within module directories (node  _modules).
-  If changing the source code is not an option there is also a resolve options called 'preferRelative' which   tries to resolve these kind of requests in the current directory too.
-  ModuleNotFoundError: Module not found: Error: Can't resolve '.yarn/$$virtual/html-loader-virtual-da5fec2bb  a/0/cache/html-loader-npm-2.1.0-b4c5e171ef-0cae64528c.zip/node_modules/html-loader/dist/runtime/getUrl.js'   in '/Users/adam/Development/avalanche-forecast'
-  Did you mean './.yarn/$$virtual/html-loader-virtual-da5fec2bba/0/cache/html-loader-npm-2.1.0-b4c5e171ef-0c  ae64528c.zip/node_modules/html-loader/dist/runtime/getUrl.js'?
-  Requests that should resolve in the current directory need to start with './'.
-  Requests that start with a name are treated as module requests and resolve within module directories (node  _modules).
-  If changing the source code is not an option there is also a resolve options called 'preferRelative' which   tries to resolve these kind of requests in the current directory too.
-  
-  - Compilation.js:1657 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/Compilation.js:1657:28
-  
-  - NormalModuleFactory.js:708 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/NormalModuleFactory.js:708:13
-  
-  
-  - NormalModuleFactory.js:272 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/NormalModuleFactory.js:272:22
-  
-  
-  - NormalModuleFactory.js:401 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/NormalModuleFactory.js:401:22
-  
-  - NormalModuleFactory.js:118 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/NormalModuleFactory.js:118:11
-  
-  - NormalModuleFactory.js:632 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/NormalModuleFactory.js:632:24
-  
-  - NormalModuleFactory.js:774 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/NormalModuleFactory.js:774:8
-  
-  - NormalModuleFactory.js:894 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/NormalModuleFactory.js:894:5
-  
-  - child-compiler.js:169 
-    [html-webpack-plugin-npm-5.2.0-9330881908-a7476f0fb7.zip]/[html-webpack-plugin]/lib/child-compiler.js:16    9:18
-  
-  - Compiler.js:513 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/Compiler.js:513:11
-  
-  - Compiler.js:1065 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/Compiler.js:1065:17
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [tapable-npm-2.2.0-516ee6aa5b-f8ed725aed.zip]/[tapable]/lib/Hook.js:18:14
-  
-  - Compiler.js:1061 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/Compiler.js:1061:33
-  
-  - Compilation.js:2412 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/Compilation.js:2412:11
-  
-  
-  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
-    [tapable-npm-2.2.0-516ee6aa5b-f8ed725aed.zip]/[tapable]/lib/Hook.js:18:14
-  
-  - Compilation.js:2405 
-    [webpack-npm-5.23.0-de860ab6b3-eace31deae.zip]/[webpack]/lib/Compilation.js:2405:38
-  
-</pre>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Avalanche Forecast</title>
+  <link rel="canonical" href="https://japurcell.github.io/avalanche-forecast/" />
+  <meta name="description" content="Provides avalanche forecast data from Avalanche.org">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Avalanche Forecast">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#fafafa">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" sizes="192x192" href="icon.png">
+  <link rel="apple-touch-icon" sizes="558x558" href="tile.png">
+<link rel="icon" href="favicon.ico"><script defer src="bundle.js"></script></head>
+
+<body>
+
+  <header>
+    <a class="logo__link" href="https://japurcell.github.io/avalanche-forecast/">Avalanche Forecast</a>
+  </header>
+
+  <!-- Add your site or application content here -->
+  <main>
+    <div id="content">
+
+    </div>
+  </main>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <!--<script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
+</body>
+
+</html>

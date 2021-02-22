@@ -10,6 +10,7 @@
   "author": "",
   "scripts": {
     "build": "webpack",
+    "build:prod": "webpack --env NODE_ENV=production",
     "start": "webpack serve --open",
     "watch": "webpack --watch"
   },

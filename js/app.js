@@ -3,18 +3,28 @@ import '../css/style.css';
 import '../css/layout.css';
 import '../css/color.css';
 import '../css/fonts.css';
-import Icon from '../icon.png';
-import Title from '../tile.png';
+import '../icon.png';
+import '../tile.png';
+import '../site.webmanifest';
 
 import Zones from './components/Zones.js';
 import addInstallHandlers from './install.js';
+import environment from 'config';
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () =>
+  window.addEventListener('load', () => {
+    let swPath = '/service-worker.js';
+    let scope = null;
+
+    if (environment === 'production') {
+      swPath = '/avalanche-forecast/service-worker.js';
+      scope = { scope: '/avalanche-forecast/' };
+    }
+
     navigator.serviceWorker
-      //.register('/avalanche-forecast/service-worker.js', { scope: '/avalanche-forecast/' })
-      .register('/service-worker.js')
-      .then(() => console.debug('Service Worker registered')));
+      .register(swPath, scope)
+      .then(() => console.debug('Service Worker registered'));
+  });
 }
 
 const apiUrl = 'https://api.avalanche.org/v2/public/products/map-layer/NWAC';
