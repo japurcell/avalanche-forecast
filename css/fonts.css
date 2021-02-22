@@ -1,0 +1,17 @@
+@import './material-icons.css';
+
+body, html {
+  font:400 12px/1.5 Segoe UI, system-ui, -apple-system, sans-serif
+}
+
+@media (min-width: 241px) {
+  body, html {
+    font:400 14px/1.5 Segoe UI, system-ui, -apple-system, sans-serif
+  }
+}
+
+@media (min-width: 321px) {
+  body, html {
+    font:400 16px/1.5 Segoe UI, system-ui, -apple-system, sans-serif
+  }
+}
