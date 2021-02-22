@@ -1,3 +1,1 @@
-export default {
-  environment: 'development'
-}
+export const environment = 'development';

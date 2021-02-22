@@ -5,7 +5,7 @@ const workbox = require('workbox-webpack-plugin');
 
 module.exports = env => {
   console.log('NODE_ENV:', env.NODE_ENV);
-  
+
   return {
     mode: 'development',
     devtool: 'inline-source-map',
@@ -69,7 +69,7 @@ module.exports = env => {
     ],
     resolve: {
       alias: {
-        config: path.join(__dirname, 'config', env.NODE_ENV || 'development')
+        config: path.join(__dirname, 'config', (env.NODE_ENV || 'development') + '.js')
       }
     }
   };

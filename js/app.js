@@ -9,7 +9,7 @@ import '../site.webmanifest';
 
 import Zones from './components/Zones.js';
 import addInstallHandlers from './install.js';
-import environment from 'config';
+import { environment } from 'config';
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

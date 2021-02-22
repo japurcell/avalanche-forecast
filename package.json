@@ -12,6 +12,7 @@
     "build": "webpack",
     "build:prod": "webpack --env NODE_ENV=production",
     "start": "webpack serve --open",
+    "start:prod": "webpack serve --open --env NODE_ENV=production",
     "watch": "webpack --watch"
   },
   "devDependencies": {
