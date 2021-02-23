@@ -47,6 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:f72e330a23a8c77f6b6ed364d28dcbbdfb2cc5ddcf2aef413a29fd72a4cc9222a771ad5ea43d7930b64f6c74d849afdbbc12257e9b6b0bb2aafb2efe50cdb85b#npm:5.23.0"],
             ["webpack-cli", "virtual:f72e330a23a8c77f6b6ed364d28dcbbdfb2cc5ddcf2aef413a29fd72a4cc9222a771ad5ea43d7930b64f6c74d849afdbbc12257e9b6b0bb2aafb2efe50cdb85b#npm:4.5.0"],
             ["webpack-dev-server", "virtual:f72e330a23a8c77f6b6ed364d28dcbbdfb2cc5ddcf2aef413a29fd72a4cc9222a771ad5ea43d7930b64f6c74d849afdbbc12257e9b6b0bb2aafb2efe50cdb85b#npm:3.11.2"],
+            ["webpack-merge", "npm:5.7.3"],
             ["workbox-webpack-plugin", "virtual:f72e330a23a8c77f6b6ed364d28dcbbdfb2cc5ddcf2aef413a29fd72a4cc9222a771ad5ea43d7930b64f6c74d849afdbbc12257e9b6b0bb2aafb2efe50cdb85b#npm:6.1.1"]
           ],
           "linkType": "SOFT",
@@ -2894,6 +2895,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["webpack", "virtual:f72e330a23a8c77f6b6ed364d28dcbbdfb2cc5ddcf2aef413a29fd72a4cc9222a771ad5ea43d7930b64f6c74d849afdbbc12257e9b6b0bb2aafb2efe50cdb85b#npm:5.23.0"],
             ["webpack-cli", "virtual:f72e330a23a8c77f6b6ed364d28dcbbdfb2cc5ddcf2aef413a29fd72a4cc9222a771ad5ea43d7930b64f6c74d849afdbbc12257e9b6b0bb2aafb2efe50cdb85b#npm:4.5.0"],
             ["webpack-dev-server", "virtual:f72e330a23a8c77f6b6ed364d28dcbbdfb2cc5ddcf2aef413a29fd72a4cc9222a771ad5ea43d7930b64f6c74d849afdbbc12257e9b6b0bb2aafb2efe50cdb85b#npm:3.11.2"],
+            ["webpack-merge", "npm:5.7.3"],
             ["workbox-webpack-plugin", "virtual:f72e330a23a8c77f6b6ed364d28dcbbdfb2cc5ddcf2aef413a29fd72a4cc9222a771ad5ea43d7930b64f6c74d849afdbbc12257e9b6b0bb2aafb2efe50cdb85b#npm:6.1.1"]
           ],
           "linkType": "SOFT",

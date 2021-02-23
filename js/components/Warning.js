@@ -24,16 +24,19 @@ const warningCloseClickHandler = {
   }
 };
 
-const warningIcon = ({ id, warning, color }) =>
-  html`
+const warningIcon = ({ id, warning, color }) => {
+  const hasWarning = warning && warning.reason;
+
+  return html`
     <span @click=${warningClickHandler}
       data-warningid="warning${id}"
       style=${styleMap({
         color: color,
-        cursor: warning && warning.reason ? 'pointer' : 'inherit'
+        cursor: hasWarning ? 'pointer' : 'inherit'
       })}
-      class="material-icons md-36">${warning && warning.reason ? 'warning' : 'error_outline'}</span>
+      class="material-icons md-36${hasWarning ? ' warning__icon' : ''}">${hasWarning ? 'warning' : 'error_outline'}</span>
   `;
+};
 
 const warningTemplate = ({ id, warning, color, danger }) =>
   warning && warning.reason && warning.reason.length

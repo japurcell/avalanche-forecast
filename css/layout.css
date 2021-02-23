@@ -142,6 +142,27 @@ article header span {
   cursor: pointer;
 }
 
+/* Remove default browser touch styles */
+.warning__icon {
+  outline: 0;
+  /* Chrome / Safari */
+  -webkit-tap-highlight-color: transparent;
+  /* Firefox */
+  background-image: none;
+}
+
+/* Remove default Firefox touch style */
+.warning__icon::-moz-focus-inner {
+  border: 0;
+}
+
+.warning__icon:hover,
+.warning__icon:focus,
+.warning__icon:active {
+  outline-style: solid;
+  outline-width: 1px;
+}
+
 article > p {
   margin-top: .5rem;
 }
