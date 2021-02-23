@@ -107,7 +107,7 @@ article header span {
   height: 97%;
 }
 
-@media (min-width: 415px) {
+@media (min-width: 28.125rem) {
   .zone__warning {
     width: unset;
     height: unset;
@@ -126,7 +126,7 @@ article header span {
   text-transform: uppercase;
 }
 
-@media (min-width: 415px) {
+@media (min-width: 28.125rem) {
   .warning__navbar .material-icons {
     position: relative;
     top: -2.6rem;
