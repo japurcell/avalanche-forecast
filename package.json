@@ -10,9 +10,9 @@
   "author": "",
   "scripts": {
     "build": "webpack --config webpack.dev.js",
-    "build:prod": "webpack --env NODE_ENV=production --config webpack.prod.js",
+    "build:prod": "webpack --config webpack.prod.js --node-env production",
     "start": "webpack serve --open --config webpack.dev.js",
-    "start:prod": "webpack serve --open --env NODE_ENV=production --config webpack.prod.js",
+    "start:prod": "webpack serve --open --node-env production --config webpack.prod.js",
     "watch": "webpack --watch --config webpack.dev.js"
   },
   "devDependencies": {
