@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "module": "esnext",
+      "moduleResolution": "node",
+      "target": "esnext"
+  },
+  "exclude": [
+      "node_modules"
+  ],
+  "include": [
+      "js/**/*"
+  ]
+}

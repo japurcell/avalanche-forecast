@@ -1,5 +1,10 @@
 {
-    "files.exclude": {
-        "**/.yarn": true
-    }
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "javascript.preferences.quoteStyle": "single",
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+      "**/.yarn": true
+  }
 }

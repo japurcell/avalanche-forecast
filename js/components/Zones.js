@@ -1,6 +1,7 @@
 import { html, render } from 'lit-html';
 import zonePeriod from './ZonePeriod.js';
 import { warningIcon, warningTemplate } from './Warning.js';
+import warningTouch from './warning-touch.js';
 
 const renderZones = features =>
   features.map(feature => {
@@ -36,5 +37,6 @@ const renderZones = features =>
 export default (features, targetElement) => {
   if (Array.isArray(features)) {
     render(renderZones(features), targetElement);
+    warningTouch('.zone__warning');
   }
 };
